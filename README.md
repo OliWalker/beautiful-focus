@@ -9,7 +9,7 @@ Don’t let designers know it was this easy...
 ## Paste this into the head of the document
 
 ```
-<script src =”http://beautifulfocus.io/lib/beautiful-focus.js” />
+<script src =”https://beautifulfocus.io/lib/beautiful-focus.js” />
 ```
 
 ## Features
