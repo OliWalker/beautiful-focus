@@ -1,0 +1,11 @@
+.__beautiful-focus {
+  position: absolute;
+  z-index: 1000;
+  transition: all ease-in-out 0.2s;
+  box-shadow: white 0px 0px 0px 8px, black 0px 0px 8px 4px,
+    rgba(0, 0, 0, 0.3) 0px 0px 7px 10px;
+}
+
+*:focus {
+  outline: none;
+}

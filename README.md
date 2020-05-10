@@ -9,7 +9,7 @@ Don’t let designers know it was this easy...
 ## Paste this into the head of the document
 
 ```
-<script src =”https://beautifulfocus.io/lib/beautiful-focus.js” />
+<script src=”https://beautifulfocus.io/lib/beautiful-focus.js” />
 ```
 
 ## Features
@@ -50,7 +50,7 @@ Below details some useful information when using the Beautiful Focus lib.
 Simply style using the css id selector:
 
 ```
-#beautiful-focus {
+#__beautiful-focus {
  /* Your styles go here */
 }
 ```
