@@ -1,0 +1,285 @@
+:root {
+  --white: #ffffff;
+  --text0: #111;
+  --text1: #333;
+  --grey0: #fafafa;
+  --grey1: #d8d8d8;
+
+  --fontSize1: 10px;
+  --fontSize2: 12px;
+  --fontSize3: 14px;
+  --fontSize4: 16px;
+  --fontSize5: 20px;
+  --fontSize6: 24px;
+  --fontSize7: 28px;
+  --fontSize8: 32px;
+  --fontSize9: 40px;
+  --fontSize10: 56px;
+  --fontSize11: 72px;
+
+  /* SPACINGS */
+
+  --spacings1: 2px;
+  --spacings2: 4px;
+  --spacings3: 8px;
+  --spacings4: 12px;
+  --spacings5: 16px;
+  --spacings6: 24px;
+  --spacings7: 32px;
+  --spacings8: 40px;
+  --spacings9: 56px;
+  --spacings10: 72px;
+  --spacings11: 88px;
+  --spacings12: 104px;
+
+  --max-content: 900px;
+}
+
+body {
+  background-color: var(--grey0);
+}
+
+header {
+  background-color: var(--text0);
+  box-shadow: 0px 3px 8px -3px black;
+  z-index: 5;
+  position: sticky;
+  top: 0;
+}
+
+header div {
+  padding: var(--spacings3);
+  max-width: var(--max-content);
+  margin: 0 auto;
+}
+
+main {
+  background-color: var(--white);
+  padding: var(--spacings3);
+  padding-top: 0;
+  max-width: var(--max-content);
+  margin: 0 auto;
+  box-shadow: 0px 0px 14px -14px black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text0);
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: var(--fontSize8);
+  margin: var(--spacings7) 0;
+}
+
+h2 {
+  font-size: var(--fontSize6);
+  margin: var(--spacings6) 0;
+}
+
+h3 {
+  font-size: var(--fontSize6);
+}
+
+p,
+li {
+  color: var(--text1);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: var(--fontSize3);
+  margin: var(--spacings5) 0;
+}
+
+code,
+blockquote {
+  background-color: var(--grey0);
+  padding: var(--spacings4);
+  border-radius: 8px;
+  border: 1px solid var(--grey1);
+  display: block;
+  font-size: var(--fontSize3);
+}
+
+cite {
+  display: block;
+  text-align: end;
+  margin: var(--spacings4) var(--spacings4) 0 0;
+}
+
+main h1:first-of-type {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacings6);
+}
+
+li:first-child {
+  margin-top: 0;
+}
+
+li:before {
+  font-size: var(--fontSize6);
+  content: "●";
+  margin-right: var(--spacings6);
+}
+
+.demo {
+  margin-left: -8px;
+  width: calc(100% + 16px);
+  position: relative;
+}
+.demo svg {
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  main,
+  header div {
+    padding: var(--spacings5);
+  }
+
+  main {
+    padding-top: 0;
+  }
+
+  h1 {
+    font-size: var(--fontSize9);
+    margin-top: var(--spacings8);
+    margin-bottom: var(--spacings6);
+  }
+
+  h2 {
+    font-size: var(--fontSize7);
+    margin-top: var(--spacings8);
+    margin-bottom: var(--spacings6);
+  }
+
+  p,
+  code,
+  li {
+    font-size: var(--fontSize4);
+    margin: var(--spacings6) 0;
+  }
+
+  .demo {
+    margin-left: -20px;
+    width: calc(100% + 40px);
+  }
+}
+@media (min-width: 780px) {
+  main {
+    padding: var(--spacings7);
+    padding-top: 0;
+  }
+
+  header div {
+    padding: var(--spacings5) var(--spacings7);
+  }
+
+  h1 {
+    font-size: var(--fontSize10);
+    margin-top: var(--spacings10);
+    margin-bottom: var(--spacings7);
+  }
+
+  h2 {
+    font-size: var(--fontSize8);
+    margin-top: var(--spacings10);
+    margin-bottom: var(--spacings7);
+  }
+
+  p,
+  code,
+  li {
+    font-size: var(--fontSize5);
+    margin: var(--spacings6) 0;
+  }
+  .demo {
+    margin-left: -32px;
+    width: calc(100% + 64px);
+  }
+}
+
+.demo-beautiful-focus {
+  position: absolute;
+  transition: all ease-in-out 0.2s;
+  box-shadow: white 0px 0px 0px 8px, black 0px 0px 8px 4px,
+    rgba(0, 0, 0, 0.3) 0px 0px 7px 10px;
+  animation: moveDemo 6s infinite;
+}
+
+@keyframes moveDemo {
+  0% {
+    top: 0px;
+    left: -5%;
+    width: 35%;
+    height: 22%;
+    opacity: 0;
+  }
+
+  15% {
+    top: 30px;
+    left: 0%;
+    opacity: 1;
+    width: 35%;
+    height: 22%;
+  }
+
+  30% {
+    top: 170px;
+    left: 18%;
+    width: 20%;
+    height: 20%;
+  }
+
+  45% {
+    top: 300px;
+    left: 22%;
+    width: 35%;
+    height: 22%;
+  }
+
+  60% {
+    top: 30px;
+    left: 63%;
+    width: 35%;
+    height: 22%;
+  }
+
+  75% {
+    top: 170px;
+    left: 60%;
+    width: 20%;
+    height: 20%;
+  }
+
+  90% {
+    top: 305px;
+    left: 78%;
+    width: 20%;
+    height: 20%;
+    opacity: 1;
+  }
+
+  100% {
+    top: 305px;
+    left: 105%;
+    width: 20%;
+    height: 20%;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beautiful Focus</title>
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="./assets/beautiful-focus-logo.svg" aria-label="Beautiful Focus" />
+      </div>
+    </header>
+    <main>
+      <div class="demo">
+        <img
+          src="./assets/all-the-inputs.svg"
+          aria-label="A demo of the beautiful focus doing its beautiful thing"
+        />
+        <span class="demo-beautiful-focus" />
+      </div>
+<h1 id="beautiful-focus">Beautiful Focus</h1>
+<h2 id="accessability--beauty">Accessability &amp; Beauty</h2>
+<p>A simple script to go from an ugly focus ring to a focus that your users are going to want to use.</p>
+<p>Don’t let designers know it was this easy...</p>
+<h2 id="paste-this-into-the-head-of-the-document">Paste this into the head of the document</h2>
+<pre><code>&lt;script src =”https://cdn.cloudflare.com/beatiful-focus.js” /&gt;</code></pre><h2 id="features">Features</h2>
+<ul>
+<li>Gorgeous focus ring</li>
+<li>Only shows Focus whilst navigating with the keyboard</li>
+<li>Automatically hides when using a mouse</li>
+<li>Fully customisable</li>
+</ul>
+<h2 id="why-beautiful-focus">Why beautiful focus</h2>
+<p>Accessability should be a priority for every web-designer and developer these days. The web was built as an all-inclusive world we can all benefit from.</p>
+<blockquote>
+<p>“The power of the Web is in its universality.<br>Access by everyone regardless of disability is an essential aspect.”
+<cite>Tim Berners Lee</cite></p>
+</blockquote>
+<p>However we have so much to do! So many things to build and so many features to push. It is often an overthought or a last minute job to try to “Add Accessability” to a website.</p>
+<p>Designers hate that blue outline that chrome gives when you click a button...</p>
+<p>You’ve done it before right? used the old</p>
+<pre><code>&amp;:focus {
+    outline: none;
+}</code></pre><p>Well not anymore, stick Beautiful-Focus into your website, sit back and relax knowing that all users will get a great experience here.</p>
+<h2 id="usage">Usage</h2>
+<p>Below details some useful information when using the Beautiful Focus lib.</p>
+<h2 id="over-ride-the-styles">Over-ride the styles</h2>
+<p>Simply style using the css id selector:</p>
+<pre><code>#beautiful-focus {
+ /* Your styles go here */
+}</code></pre><h2 id="clearing-the-focus">Clearing the focus</h2>
+<p>Sometimes you will want to manually clear the focus ring. To do so simply dispatch a custom window event like so:</p>
+<pre><code>const event = new Event(&#39;clearFocus&#39;);
+window.dispatchEvent(event);</code></pre><h2 id="single-page-apps">Single Page Apps</h2>
+<p>Single Page Apps will need to inform Beautiful-Focus when the page has changed so it knows to clear itself up.</p>
+<p>To do this we need to dispatch the above mention clearFocus event when the page changes.</p>
+<h2 id="contributing">Contributing</h2>
+<p>Beautiful Focus is a young project with a long way to go!</p>
+<p>We would love you to help out, either by submitting Pr&#39;s to help with docs or the library, or just to give feedback on how we could improve!</p>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li>Add more info to docs.</li>
+<li>Add code snippets for SPA&#39;s clearing focus on route change</li>
+<li>many many more...</li>
+</ul>
+    </main>
+  </body>
+</html>
