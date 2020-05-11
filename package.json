@@ -1,6 +1,6 @@
 {
   "name": "beautiful-focus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library to make the focus on your site beautiful",
   "scripts": {
     "build": "node scripts/buildPage.js"
