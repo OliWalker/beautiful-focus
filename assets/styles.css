@@ -37,6 +37,7 @@
 
 body {
   background-color: var(--grey0);
+  overflow-x: hidden;
 }
 
 header {
@@ -141,9 +142,25 @@ li:before {
   margin-left: -8px;
   width: calc(100% + 16px);
   position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--grey0);
 }
 .demo svg {
   width: 100%;
+}
+
+.demo__desktop {
+  display: none;
+}
+
+
+.demo-beautiful-focus {
+  position: absolute;
+  transition: all ease-in-out 0.2s;
+  box-shadow: white 0px 0px 0px 8px, black 0px 0px 8px 4px,
+    rgba(0, 0, 0, 0.3) 0px 0px 7px 10px;
+  animation: demo_mobile 4s infinite;
 }
 
 @media (min-width: 480px) {
@@ -214,15 +231,63 @@ li:before {
   }
 }
 
-.demo-beautiful-focus {
-  position: absolute;
-  transition: all ease-in-out 0.2s;
-  box-shadow: white 0px 0px 0px 8px, black 0px 0px 8px 4px,
-    rgba(0, 0, 0, 0.3) 0px 0px 7px 10px;
-  animation: moveDemo 6s infinite;
+@media(min-width: 900px) {
+  .demo__desktop {
+    display: block;
+  }
+  .demo__mobile {
+    display: none;
+  }
+  .demo-beautiful-focus {
+    animation: demo_desktop 6s infinite;
+
+  }
 }
 
-@keyframes moveDemo {
+@keyframes demo_mobile {
+  0% {
+    top: 0px;
+    left: -5%;
+    width: 300px;
+    height: 65px;
+    opacity: 0;
+  }
+
+  20% {
+    top: 30px;
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 90px;
+    opacity: 1;
+  }
+
+  50% {
+    top: 170px;
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 60px;
+    opacity: 1;
+  }
+
+  80% {
+    top: 303px;
+    left: calc(50% - 90px);
+    width: 180px;
+    height: 70px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 320px;
+    left: 105%;
+    width: 150px;
+    height: 60px;
+    opacity: 0;
+  }
+
+}
+
+@keyframes demo_desktop {
   0% {
     top: 0px;
     left: -5%;
